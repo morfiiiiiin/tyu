@@ -9,14 +9,14 @@ namespace Pract1_Florich_I223
     public partial class DataGrid : Window
     {
         // Контекст базы данных
-        private ShopDBEntities5 _dbContext;
+        private ShopDBLevchenkoEntities _dbContext;
 
         public DataGrid()
         {
             InitializeComponent();
 
             // Инициализация контекста базы данных
-            _dbContext = new ShopDBEntities5();
+            _dbContext = new ShopDBLevchenkoEntities();
 
             // Загрузка данных из таблицы Products
             LoadProducts();

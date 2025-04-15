@@ -25,7 +25,7 @@ namespace Pract1_Florich_I223
         {
             InitializeComponent();
             _authService = new AuthService();
-            ShopDBEntities5  dbContext = new ShopDBEntities5();
+            ShopDBLevchenkoEntities dbContext = new ShopDBLevchenkoEntities();
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
@@ -33,11 +33,11 @@ namespace Pract1_Florich_I223
             Close();
         }
 
-        private void btnOpen_Click(object sender, RoutedEventArgs e)
+        private void BtnOpen_Click(object sender, RoutedEventArgs e)
         {
             string login = tbxlogin.Text;
             string pass = tbxPass.Text;
-                        
+
             if (_authService.CheckData(login, pass))
             {
                 // Создаем экземпляр окна DataGrid

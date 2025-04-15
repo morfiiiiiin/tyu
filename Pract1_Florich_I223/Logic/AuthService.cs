@@ -11,21 +11,21 @@ namespace Pract1_Florich_I223.Logic
 {
     public class AuthService : IAuthService
     {
-        private List<User> _users;
-        private ShopDBEntities5 dbContext; // Делаем dbContext полем класса
+       
+        private ShopDBLevchenkoEntities dbContext; // Делаем dbContext полем класса
 
         public AuthService()
         {
-            dbContext = new ShopDBEntities5(); // Инициализируем dbContext в конструкторе
+            dbContext = new ShopDBLevchenkoEntities(); // Инициализируем dbContext в конструкторе
         }
 
         public bool CheckData(string login, string pass)
         {
             // Ищем пользователя по логину и паролю
-            var user = dbContext.Users.FirstOrDefault(u => u.Login == login && u.Pass == pass);
+            var user = dbContext.Users.FirstOrDefault(u => u.Login == login && u.Password == pass);
 
             // Если пользователь найден и пароль совпадает, возвращаем true
-            if (user != null && user.Pass == pass)
+            if (user != null && user.Password == pass)
             {
                 return true;
             }

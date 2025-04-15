@@ -13,10 +13,10 @@ namespace Pract1_Florich_I223.DBmodel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ShopDBEntities5 : DbContext
+    public partial class ShopDBLevchenkoEntities : DbContext
     {
-        public ShopDBEntities5()
-            : base("name=ShopDBEntities5")
+        public ShopDBLevchenkoEntities()
+            : base("name=ShopDBLevchenkoEntities")
         {
         }
     
@@ -26,6 +26,8 @@ namespace Pract1_Florich_I223.DBmodel
         }
     
         public virtual DbSet<Products> Products { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Users> Users { get; set; }
     }
 }

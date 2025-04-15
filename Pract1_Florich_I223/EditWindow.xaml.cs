@@ -6,10 +6,10 @@ namespace Pract1_Florich_I223
 {
     public partial class EditWindow : Window
     {
-        private ShopDBEntities5 _dbContext;
+        private ShopDBLevchenkoEntities _dbContext;
         private Products _product;
 
-        public EditWindow(Products product, ShopDBEntities5 dbContext)
+        public EditWindow(Products product, ShopDBLevchenkoEntities dbContext)
         {
             InitializeComponent();
 
